@@ -44,7 +44,7 @@ def register_user(request):
             password = form.cleaned_data['password1']
             user = authenticate(username=username, password=password)
             login(request, user)
-            messages.success(request, "You have successfully registered. Welcome to CRM!")
+            messages.success(request, "You have successfully registered. Welcome to Task.a!")
             return redirect('home')
     else:
         form=SignUpForm()
